@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Introducción a HTML</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+
+    <body>
+        <div class="contenedor-principal">
+            <h1>Introducción a HTML</h1>
+            <!-- <div>
+                <span>Prerrequisitos:</span>
+                <ul>
+                    <li>Tener instalado VS Code u otro entorno de desarrollo integrado o editor de texto con el que se sientan cómodos.</li>
+                    <li>Tener instalado un navegador moderno como Opera, Firefox, Chrome o Brave.</li>
+                    <li>Tener instalada la extensión de Live Server en VS Code.</li>
+                </ul>
+            </div> -->
+            <div>
+                <h2>¿Qué es HTML?</h2>
+                <p>
+                    HTML, siglas en inglés de HyperText Markup Language (‘lenguaje de marcado de hipertexto’), es un
+                    <a href="https://es.wikipedia.org/wiki/Lenguaje_de_marcado">lenguaje de marcado</a>
+                    utilizado para elaborar y estructurar el contenido de las páginas web. No es un lenguaje de
+                    programación, sino más bien un conjunto de etiquetas y elementos que le indican al navegador cómo
+                    mostrar y organizar el contenido en una página web; como texto, imágenes, videos, juegos, entre
+                    otros.
+                </p>
+            </div>
+            <div>
+                <h2>Elementos</h2>
+                <h3>Partes de un elemento HTML</h3>
+                <p>Esta es la anatomía del elemento &lt;p&gt; (párrafo):</p>
+                <img
+                    class="imagenEjemplo"
+                    src="img/partesDeUnElementoHTML.png"
+                    alt="Partes de un elemento HTML señaladas, usando un elemento p (párrafo)"
+                />
+                <p>
+                    El elemento consta de tres partes principales: la etiqueta de apertura, el contenido y la etiqueta
+                    de cierre.
+                </p>
+                <ul>
+                    <li>
+                        <b>Etiqueta de apertura</b>: Es la parte inicial del elemento y se representa mediante el nombre
+                        del elemento envuelto entre símbolos de menor que ("<") y mayor que (">"). Por ejemplo,
+                        &lt;p&gt; es la etiqueta de apertura de un párrafo.
+                    </li>
+                    <li>
+                        <b>Contenido</b>: Es el texto o información dentro del elemento. Representa el contenido visible
+                        que se mostrará en la página web.
+                    </li>
+                    <li>
+                        <b>Etiqueta de cierre</b>: Es similar a la etiqueta de apertura, pero con una barra diagonal
+                        ("/") antes del nombre del elemento, indica la parte final del elemento. Por ejemplo, &lt;/p&gt;
+                        es la etiqueta de cierre de un párrafo.
+                    </li>
+                </ul>
+                <p>
+                    Es importante incluir tanto la etiqueta de apertura como la de cierre para evitar errores y
+                    resultados inesperados.
+                </p>
+                <h3>Elementos anidados</h3>
+                <p>
+                    En HTML, es posible colocar elementos dentro de otros elementos, lo cual se conoce como anidamiento.
+                    Esto permite estructurar y organizar el contenido de una página web de manera jerárquica y lógica.
+                </p>
+                <p>
+                    Al anidar elementos, uno se convierte en el elemento padre y el otro en el elemento hijo. El
+                    elemento hijo está contenido dentro del elemento padre, lo que significa que está encapsulado por
+                    él. Esto se logra al colocar el elemento hijo entre la etiqueta de apertura y la etiqueta de cierre
+                    del elemento padre.
+                </p>
+                <p>Por ejemplo, considera el siguiente código HTML:</p>
+                <code> &lt;p&gt;Este es un párrafo &lt;strong&gt;importante&lt;/strong&gt; en negrita.&lt;/p&gt; </code>
+                <p>
+                    En este caso, el elemento &lt;p&gt; es el elemento padre y contiene al elemento &lt;strong&gt;, que
+                    es el elemento hijo. El resultado visual en un navegador web sería: "Este es un párrafo importante
+                    en negrita." El texto "importante" se muestra en negrita debido al uso del elemento &lt;strong&gt;
+                    dentro del elemento &lt;p&gt;.
+                </p>
+                <p>
+                    Los elementos anidados pueden ser utilizados para aplicar estilos específicos, crear estructuras
+                    complejas y definir relaciones entre diferentes partes del contenido. Es importante tener en cuenta
+                    que los elementos anidados deben abrirse y cerrarse en el orden correcto para mantener una
+                    estructura válida.
+                </p>
+                <p>Por ejemplo, el siguiente código sería inválido debido a un anidamiento incorrecto:</p>
+                <code>&lt;p&gt;Este es un párrafo &lt;strong&gt;importante en negrita.&lt;/p&gt;&lt;/strong&gt;</code>
+                <h3>Elementos vacíos</h3>
+                <p>
+                    No todos los elementos siguen el patrón de etiqueta de apertura, contenido y etiqueta de cierre.<br />
+                    Los elementos vacíos, también conocidos como elementos nulos o vanos, son elementos HTML que no
+                    tienen contenido ni etiqueta de cierre. Estos elementos consisten en una etiqueta única, que se
+                    utiliza para insertar o incrustar algo en una página web, como imágenes, saltos de línea u otros
+                    tipos de contenido que no requieren contenido adicional o etiqueta de cierre. Por ejemplo, para
+                    insertar una imagen dentro de una pagina web se usa el elemento &lt;img&gt; de la siguiente manera:
+                </p>
+                <code>
+                    &lt;img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Finchen.jpg" alt="Imagen de un gato
+                    doméstico llamado Finchen"/&gt;
+                </code>
+                <p>El texto anterior muestra la siguiente imagen:</p>
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/3/35/Finchen.jpg"
+                    alt="Imagen de un gato doméstico llamado Finchen"
+                />
+                <p>
+                    Nota: En HTML, no es necesario añadir un / al final de la etiqueta de un elemento vacío, por ejemplo
+                    <img src="images/cat.jpg" alt="cat" />. Sin embargo, también es una sintaxis válida, y puedes hacer
+                    esto cuando quieras que tu HTML sea XML válido.
+                </p>
+            </div>
+            <div>
+                <h2>Atributos</h2>
+                <h3>Partes de un atributo HTML</h3>
+                <p>
+                    El elemento de imagen del ejemplo anterior tenia atributos. Los atributos en un elemento tienen se
+                    ven así:
+                </p>
+                <img
+                    class="imagenEjemplo2"
+                    src="img/partesDeUnAtributoHTML.png"
+                    alt="Partes de un atributo de un elemento HTML señaladas, usando un elemento img (imagen)"
+                />
+                <p>Un atributo está compuesto por:</p>
+                <ul>
+                    <li>
+                        Un espacio entre este y el nombre del elemento. (Para un elemento con más de un atributo, los
+                        atributos también deben estar separados por espacios).
+                    </li>
+                    <li>
+                        El <b>nombre del atributo</b>, seguido por un signo igual. El nombre proporciona información
+                        sobre qué propiedad se está modificando. Algunos ejemplos comunes de nombres de atributos
+                        incluyen src, href, class, id, alt, width, height, entre otros.
+                    </li>
+                    <li>
+                        Un <b>valor del atributo</b>, rodeado de comillas de apertura y cierre. Es el valor asignado al
+                        atributo y define la configuración o el contenido específico para ese atributo. El valor puede
+                        ser una cadena de texto, un número, un color, una URL u otro tipo de dato dependiendo del
+                        atributo.
+                    </li>
+                </ul>
+                <h3>Atributos booleanos</h3>
+                <p>
+                    A diferencia de los atributos regulares que tienen un nombre y un valor, los atributos booleanos se
+                    escriben simplemente como nombres de atributos sin un valor. Estos atributos se utilizan
+                    para indicar la presencia o ausencia de una característica o propiedad particular en un elemento
+                    HTML. La presencia del atributo por sí sola indica que la característica está activada, mientras que
+                    la ausencia del atributo implica que la característica está desactivada.
+                </p>
+                <p>
+                    Por ejemplo, el atributo booleano disabled indica que un elemento interactivo está desactivado o inhabilitado, así:
+                </p>
+                <code>
+                    &lt;input type="text" disabled /&gt; <br/>
+                    &lt;input type="text" /&gt;
+                </code>
+                <p>El ejemplo anterior, el elemento input que tiene el atributo booleano disabled produce un campo de ingreso de texto que no se puede interactuar y el otro elemento input, que no lo tiene, sí lo permite:</p>
+                <input type="text" disabled />
+                <input type="text">
+                <h3>Las comillas en los valores de los atributos</h3>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,12 @@
+.ejemplo{
+    margin: 10px 50px;
+}
+.imagenEjemplo{
+    max-width: 500px;
+}
+.imagenEjemplo2{
+    max-width: 1000px;
+}
+.contenedor-principal{
+    padding: 0 12.5%;
+}
